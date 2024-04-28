@@ -8,7 +8,7 @@ import logging
 
 AZURE_OPENAI_KEY = os.environ.get("AZURE_OPENAI_API_KEY")
 AZURE_OPENAI_SERVICE = os.environ.get("AZURE_OPENAI_PATH")
-CHAT_GPT_DEPLOYMENT = os.environ.get("CHAT_GPT_DEPLOYMENT")
+AZURE_OPENAI_DEPLOYMENT = os.environ.get("AZURE_OPENAI_DEPLOYMENT")
 AZURE_OPENAI_TEMPERATURE = os.environ.get("AZURE_OPENAI_TEMPERATURE") or "0.0"
 AZURE_OPENAI_TEMPERATURE = float(AZURE_OPENAI_TEMPERATURE)
 AZURE_OPENAI_TOP_P = os.environ.get("AZURE_OPENAI_TOP_P") or "0.27"
@@ -35,7 +35,7 @@ def get_answer(history):
         logging.info("[no search] PROMPT GENERADO")
         logging.info(f"[no search] {[prompt]}")
         completion = openai.ChatCompletion.create(
-                engine=CHAT_GPT_DEPLOYMENT,
+                engine=AZURE_OPENAI_DEPLOYMENT,
                 messages=prompt,
                 temperature=AZURE_OPENAI_TEMPERATURE,
                 max_tokens=500,

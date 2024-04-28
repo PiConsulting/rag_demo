@@ -19,9 +19,9 @@ AZURE_STORAGE_CONTAINER = os.environ.get("AZURE_STORAGE_CONTAINER") or "content"
 AZURE_SEARCH_SERVICE = os.environ.get("AZURE_SEARCH_SERVICE") or "gptkb"
 AZURE_SEARCH_INDEX = os.environ.get("AZURE_SEARCH_INDEX") or "gptkbindex"
 AZURE_SEARCH_KEY = os.environ.get("AZURE_SEARCH_KEY") or "gptkbindex"
-AZURE_OPENAI_SERVICE = os.getenv("CHAT_GPT_URL")  or "myopenai"
-AZURE_OPENAI_CHATGPT_DEPLOYMENT = os.getenv("CHAT_GPT_DEPLOYMENT") or "chat"
-AZURE_OPENAI_KEY = os.getenv("CHAT_GTP_KEY") or "key"
+AZURE_OPENAI_SERVICE = os.getenv("AZURE_OPENAI_SERVICE")  or "myopenai"
+AZURE_OPENAI_CHATGPT_DEPLOYMENT = os.getenv("AZURE_OPENAI_DEPLOYMENT") or "chat"
+AZURE_OPENAI_KEY = os.getenv("AZURE_OPENAI_KEY") or "key"
 KB_FIELDS_CONTENT = os.environ.get("KB_FIELDS_CONTENT") or "content"
 KB_FIELDS_CATEGORY = os.environ.get("KB_FIELDS_CATEGORY") or "category"
 KB_FIELDS_SOURCEPAGE = os.environ.get("KB_FIELDS_SOURCEPAGE") or "sourcepage"
@@ -74,7 +74,6 @@ def chat():
         # ------------------------------------------
         # Busca en search y responde, RAG simple
         approach = request.json["approach"]
-    
         impl = chat_approaches.get(approach)
         if not impl:
             return jsonify({"error": "unknown approach"}), 400
