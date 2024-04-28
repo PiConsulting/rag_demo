@@ -1,7 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import { Checkbox, Panel, DefaultButton, TextField, SpinButton } from "@fluentui/react";
 import { SparkleFilled } from "@fluentui/react-icons";
-import Logo from "../../assets/logo_alto_v2.png";
 
 import styles from "./Chat.module.css";
 
@@ -136,7 +135,6 @@ const Chat = () => {
                     {!lastQuestionRef.current ? (
                         <div className={styles.chatEmptyState}>
                             <div className={styles.chatEmptyState}>
-                                <img src={Logo} alt="Chat logo"></img>
                                 <h2 className={styles.chatEmptyStateSubtitle}>Soy tu asistente, preguntame lo que quieras.</h2>
                                 {/*<ExampleList onExampleClicked={onExampleClicked} />*/}
                             </div>
@@ -185,7 +183,7 @@ const Chat = () => {
                     </div>
                 </div>
 
-                {/*answers.length > 0 && activeAnalysisPanelTab && (
+                {answers.length > 0 && activeAnalysisPanelTab && (
                     <AnalysisPanel
                         className={styles.chatAnalysisPanel}
                         activeCitation={activeCitation}
@@ -194,7 +192,7 @@ const Chat = () => {
                         answer={answers[selectedAnswer][1]}
                         activeTab={activeAnalysisPanelTab}
                     />
-                )*/}
+                )}
 
                 {/*
                 <Panel
