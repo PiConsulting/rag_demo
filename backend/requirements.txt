@@ -32,7 +32,7 @@ idna==3.4
 importlib-metadata==6.5.0
 isodate==0.6.1
 itsdangerous==2.1.2
-Jinja2==3.1.2
+Jinja2==3.1.4
 langchain==0.0.146
 MarkupSafe==2.1.2
 marshmallow==3.19.0
