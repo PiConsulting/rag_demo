@@ -37,7 +37,7 @@ langchain==0.0.146
 MarkupSafe==2.1.2
 marshmallow==3.19.0
 marshmallow-enum==1.5.1
-msal==1.22.0
+msal==1.28.0
 msal-extensions==1.0.0
 msrest==0.7.1
 msrestazure==0.6.4
