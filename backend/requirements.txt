@@ -13,7 +13,7 @@ azure-storage-blob==1.5.0
 azure-storage-common==1.4.2
 azure-storage-file==1.4.0
 azure-storage-queue==1.4.0
-certifi==2022.12.7
+certifi==2024.7.4
 cffi==1.15.1
 charset-normalizer==3.1.0
 click==8.1.3
